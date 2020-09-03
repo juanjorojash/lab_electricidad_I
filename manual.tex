@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Tecnologico de Costa Rica/Instructivo de Laboratorio de Electricidad I
+% Tecnológico de Costa Rica/Instructivo de Laboratorio de Electricidad I
 % LaTeX Template
 % Version 3.1 (25/3/14)
 %
@@ -23,7 +23,7 @@
 \usepackage{url}
 \usepackage{float}
 \usepackage[utf8]{inputenc}
-\usepackage[spanish,activeacute]{babel} %Permite la escritura intiutiva en español
+\usepackage[spanish,activeacute]{babel} %Permite la escritura intuitiva en español
 \usepackage{siunitx} % Provides the \SI{}{} and \si{} command for typesetting SI units
 \sisetup{output-decimal-marker = {,}}
 \usepackage{graphicx} % Required for the inclusion of images
@@ -80,14 +80,14 @@
 \end{figure}
 \vspace*{0.4in}
 \begin{Large}
-ESCUELA DE INGENIERIA ELECTROMECANICA\\
+ESCUELA DE INGENIERÍA ELECTROMECÁNICA\\
 \vspace*{0.15in}
-AREA ELECTRICA\\
+ÁREA ELÉCTRICA\\
 \vspace*{0.8in}
 \end{Large}
 \vspace*{0.2in}
 \begin{Large}
-\textbf{MANUAL DE PRACTICAS DE LABORATORIO} \\
+\textbf{MANUAL DE PRÁCTICAS DE LABORATORIO} \\
 \end{Large}
 \vspace*{0.3in}
 \begin{large}
@@ -101,7 +101,7 @@ Versión: 1.3\\
 \rule{80mm}{0.1mm}\\
 \vspace*{0.1in}
 \begin{large}
-Realizado por: Juan J. Rojas \\
+Realizado por: Juan J. Rojas, \\
 Lisandro Araya y Nicolas Vaquerano\\
 \end{large}
 \end{center}
@@ -114,7 +114,7 @@ Lisandro Araya y Nicolas Vaquerano\\
 \section{\obj}
 \capacidad
 \begin{itemize}
-\item Comprender las limitaciones de lectura en los voltímetros y amperímetros de corriente continua en varias escalas.
+\item Comprender las limitaciones de lectura en los voltímetros y amperímetros de corriente continua mediante la plataforma Labvolt (LVSIM- EMS).
 \item Calcular la resistencia equivalente de un elemento utilizando el método indirecto de la Ley de Ohm.
 \item	Comprobar experimentalmente la Ley de Ohm.
 \item	Demostrar el concepto de linealidad en una resistencia.
@@ -126,26 +126,21 @@ Lisandro Araya y Nicolas Vaquerano\\
 \item	¿Cómo se debe conectar un multímetro para medir la corriente en una carga? 
 \item	¿Cómo se debe conectar un multímetro para medir el voltaje en una carga?
 \item	Según las especificaciones de su multímetro y para los distintos rangos de medición, defina cuál es el porcentaje de error en las lecturas de voltaje y corriente.
-\item	¿Qué significa la linealidad de un dispositivo eléctrico? ¿Qué consecuencias tiene esta?
+\item	¿Qué significa la linealidad de un dispositivo eléctrico? ¿Qué consecuencias tiene ésta?
+\item ¿Qué significa el código de colores? ¿La importancia para obtener el valor de una resistencia?
+
 \end{enumerate}
 
 \section{\mat}
-\textbf{A suministrar por la Escuela:}
+\textbf{Mediante la plataforma Labvolt-LVSIM https://lvsim.labvolt.com/:}
 \begin{itemize}
-\item 1 multímetro digital
-\item 1 socket para bombillo incandescente
-\item 1 bombillo incandescente
-\item 1 resistencia de potencia de 100 \si{\ohm} en 12 \si{\watt}
-\item 10 cables conectores medianos
-\item 1 fuente variable de voltaje DC
+\item 2 multímetros digitales
+\item 1 módulo de resistencia N 8311
+\item 1 fuente variable N 8821
+\item cables conectores
 \end{itemize}
-\textbf{A suministrar por el estudiante:}
-\begin{itemize}
-\item 1 multímetro digital
-\item 1 protoboard
-\item Cables de interconexión macho-macho
-\item 3 resistencias de carbón de \SI{0,25}{\watt} con valores entre \SI{1}{\kilo\ohm} y \SI{10}{\kilo\ohm}
-\end{itemize}
+
+
 \section{\pro}
 \begin{enumerate}
 \item Realice las conexiones del circuito tal y como se indica en la Figura \ref{fig:L1F1}.
@@ -163,26 +158,40 @@ Lisandro Araya y Nicolas Vaquerano\\
 (3,3) -- (5,3)
     to[voltmeter] 
 (5,0) -- (3,0)
-		
 ;
 \end{circuitikz}
 \caption{Medición de corriente y voltaje en un circuito.}
 \label{fig:L1F1}
 \end{figure}
 
-\item Encienda la fuente con un voltaje de \SI{32}{\volt} y espere unos minutos mientras el bombillo se calienta. 
-\item Una vez que el bombillo calentó mida la corriente que circula por el bombillo y el voltaje que cae en este, anote el resultado en la Tabla \ref{tab:L1T1}.
-\item	Repita las mediciones utilizando los valores de voltaje que indica la Tabla \ref{fig:L1F1} y complete la misma. Calcule indirectamente para cada caso el valor de la resistencia interna del bombillo.
-\item	Grafique el comportamiento de la resistencia interna del bombillo y analice el comportamiento. 
-\item	Cambie ahora el bombillo por una resistencia de \SI{100}{\ohm} (\SI{12}{\watt}), repita los pasos anteriores empezando con cero voltios en la fuente, llene la Tabla \ref{tab:L1T2}.
-\item  Grafique el comportamiento de la resistencia y analice el comportamiento. 
+\begin{figure}[H]
+\centering
+\includegraphics{FUENTE-RESISTENCIA.JPG}
+\caption{Circuito en Labvolt}
+\end{figure}
+
+
+\item Encienda el interruptor principal de la fuente y gire la perilla principal que permite un voltaje de \SI{10}{\volt}. 
+\item La resistencia posee 3 interruptores, accionar el interruptor del centro (600 ohmios). Medir la corriente que circula por la  resistencia y el voltaje que cae en éste, anote el resultado en la Tabla \ref{tab:L1T1}.
+\item	Repita las mediciones utilizando los valores de voltaje que indica la Tabla \ref{fig:L1F1} y complete la misma, una vez finalizado la toma de todos los datos, colocar en interruptor principal en OFF. 
+\item Calcule indirectamente (Ley de Ohm) para cada caso el valor de la resistencia interna.
+\item	Grafique el comportamiento de la resistencia interna y analice los datos obtenidos. 
+\item	Cambie ahora el interruptor de la resistencia (300 ohmios), repita los pasos anteriores empezando con cero voltios en la fuente, llene la Tabla \ref{tab:L1T2}.
+\item  Grafique el comportamiento de la resistencia y analice el datos obtenidos. 
 \item Realice las conexiones del circuito tal y como se indica en la Figura \ref{fig:L1F2}.
-\item Encienda la fuente con un voltaje de \SI{30}{\volt}.
-\item Realice las mediciones de $I$, $V_{R1}$, $V_{R2}$, $V_{R3}$.
-\item Averigüe los valores teóricos de las resistencias usando el código de colores. 
+\item Encienda el interruptor principal de la fuente y ajuste la tensión a un valor de \SI{100}{\volt}.
+\item Realice las mediciones de $I$, $V_{R1}$, $V_{R2}$, $V_{R3}$. Usar un solo amperímetro para medir la corriente, cambiar el otro tester para medir cada tensión. Antes de cambiar la ubicación del medidor de voltaje, colocar el interruptor principal de la fuente en OFF.
+\item Tomar como referencia y valores teóricos cada resistencia (1200 ohmios, 600 ohmios y 300 ohmios) según se muestra en el módulo N 8311.
 \item Llene la Tabla \ref{tab:L1T3}
 \item Realice las conexiones del circuito tal y como se indica en la Figura \ref{fig:L1F3}.
-\item Encienda la fuente con un voltaje de \SI{10}{\volt}.
+
+\begin{figure}[H]
+\centering
+\includegraphics{circ serie LVSim.JPG}
+\caption{Circuito en Labvolt}
+\end{figure}
+
+\item Encienda el interruptor principal de la fuente y ajustar la tensión con un voltaje de \SI{100}{\volt}.
 \item Realice las mediciones de $V$, $I_{R1}$, $I_{R2}$, $I_{R3}$.
 \item Averigüe los valores teóricos de las resistencias usando el código de colores. 
 \item Llene la Tabla \ref{tab:L1T4}
@@ -193,7 +202,7 @@ Lisandro Araya y Nicolas Vaquerano\\
 \begin{circuitikz} 
 \draw
 (0,0) 	
-    to[V, l=\SI{30}{\volt}, i=$I$] 
+    to[V, l=\SI{100}{\volt}, i=$I$] 
 (0,3)
 	to[R, l=$R_1$, v=$V_{R1}$] 
 (3,3)
@@ -212,7 +221,7 @@ Lisandro Araya y Nicolas Vaquerano\\
 \begin{circuitikz} 
 \draw
 (0,0) 	
-    to[V, l=\SI{10}{\volt}] 
+    to[V, l=\SI{100}{\volt}] 
 (0,3)
 	to[short] 
 (2,3)
@@ -241,7 +250,7 @@ Lisandro Araya y Nicolas Vaquerano\\
 \end{figure}
 
 \begin{table}[H]
-	\caption{Valores experimentales de corriente y voltaje del bombillo}
+	\caption{Valores experimentales de corriente y voltaje 600 ohmios}
 	\label{tab:L1T1}
 	\centering
 	\vspace{0.5cm}
@@ -250,19 +259,22 @@ Lisandro Araya y Nicolas Vaquerano\\
 		$V_B$ (\si{V}) & $I_B$(\si{\ampere}) & $R_B$($\Omega$)\\
 		\midrule
 		0 & & \\
-		4 & & \\
-		8 & & \\
-		12 & & \\
-		16 & & \\
+		10 & & \\
 		20 & & \\
-		24 & & \\
-		28 & & \\
-		32 & & \\
+		30 & & \\
+		40 & & \\
+		50 & & \\
+		60 & & \\
+		70 & & \\
+		80 & & \\
+		90 & & \\
+		100 & & \\	
+		
 		\bottomrule
 	\end{tabularx}
 \end{table}
 \begin{table}[H]
-	\caption{Valores experimentales de corriente y voltaje en la resistencia}
+	\caption{Valores experimentales de corriente y voltaje 300 ohmios}
 	\label{tab:L1T2}
 	\centering
 	\vspace{0.5cm}
@@ -271,14 +283,16 @@ Lisandro Araya y Nicolas Vaquerano\\
 		$V_R$ (\si{V}) & $I_R$(\si{\ampere}) & R($\Omega$)\\
 		\midrule
 		0 & & \\
-		4 & & \\
-		8 & & \\
-		12 & & \\
-		16 & & \\
+		10 & & \\
 		20 & & \\
-		24 & & \\
-		28 & & \\
-		32 & & \\
+		30 & & \\
+		40 & & \\
+		50 & & \\
+		60 & & \\
+		70 & & \\
+		80 & & \\
+		90 & & \\
+		100 & & \\
 		\bottomrule
 	\end{tabularx}
 \end{table}
@@ -292,9 +306,9 @@ Lisandro Araya y Nicolas Vaquerano\\
 		\toprule
 		& $V$ (\si{V}) & $I$(\si{\milli\ampere}) & $R_{teor}$(\si{\ohm}) & $R_{exp}$(\si{\ohm}) & error (\%)\\
 		\midrule
-		$R_1$ & & & & & \\
-		$R_2$ & & & & & \\
-		$R_3$ & & & & & \\
+		$R_1$ & & &1200 & & \\
+		$R_2$ & & &600 & & \\
+		$R_3$ & & &300 & & \\
 		\bottomrule
 	\end{tabularx}
 \end{table}
@@ -308,9 +322,9 @@ Lisandro Araya y Nicolas Vaquerano\\
 		\toprule
 		&$V$ (\si{V}) & $I$(\si{\milli\ampere}) & $R_{teor}$(\si{\ohm}) & $R_{exp}$(\si{\ohm}) & error (\%)\\
 		\midrule
-		$R_1$ & & & & & \\
-		$R_2$ & & & & & \\
-		$R_3$ & & & & & \\
+	    $R_1$ & & &1200 & & \\
+		$R_2$ & & &600 & & \\
+		$R_3$ & & &300 & & \\
 		\bottomrule
 	\end{tabularx}
 \end{table}
@@ -432,7 +446,7 @@ Al finalizar la práctica de laboratorio el estudiante estará en capacidad de:
 \begin{itemize}
 \item	Verificar las características eléctricas de los circuitos en serie, en paralelo y mixtos.
 \item	Realizar conexiones eléctricas de circuitos con configuraciones en serie, en paralelo y mixtos.
-\item	Calibrar una resistencia variable de acuerdo al valor requerido.
+\item	Conocer el funcionamiento de la plataforma de Tinkercad en la simulación de circuitos básicos.
 \end{itemize}
 
 \section{\inv}
@@ -452,9 +466,9 @@ Al finalizar la práctica de laboratorio el estudiante estará en capacidad de:
 \textbf{A suministrar por la Escuela:}
 \begin{itemize}
 \item	1 fuente variable de voltaje DC
-\item   10 cables conectores medianos
+\item   cables conectores
 \end{itemize}
-\textbf{A suministrar por el estudiante:}
+\textbf{A suministrar por el estudiante(comparar con uso de Tinkercad):}
 \begin{itemize}
 \item   1 protoboard
 \item   Cables de interconexión macho-macho
@@ -485,11 +499,19 @@ Al finalizar la práctica de laboratorio el estudiante estará en capacidad de:
 \caption{Circuito serie.}
 \label{fig:L3F1}
 \end{figure}
+
 \item	Arme el circuito de la Figura \ref{fig:L3F1} sin la fuente de voltaje; utilizado un multímetro mida la resistencia equivalente que vería la fuente y compárela con la calculada.
 \item	Añada la fuente del voltaje al circuito.
 \item	Realice las mediciones solicitadas y anote los valores en la Tabla \ref{tab:L3T1}.
 \item	Calcule los valores teóricos de los voltajes y corrientes solicitados; compruebe con ellos la validez de la ley de voltajes de Kirchhoff y la regla del divisor de voltaje.
 \end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{circuito serie tinkercad-2.JPG}
+\caption{Circuito serie con amperímetro en Tinkercad}
+\end{figure}
+
 
 \begin{table}[H]
 	\caption{Mediciones realizadas en el circuito serie}
@@ -517,7 +539,7 @@ Al finalizar la práctica de laboratorio el estudiante estará en capacidad de:
 \centering
 \begin{circuitikz} \draw
 (-1,0) 	
-    to[american voltage source, l=10\si{\volt}] 
+    to[american voltage source, l=30\si{\volt}] 
 (-1,3) -- (1,3)
     to[R, l=\SI{600}{\ohm}, i>^=$i_1$, v=$v$] 
 (1,0)-- (3,0)
@@ -539,6 +561,12 @@ Al finalizar la práctica de laboratorio el estudiante estará en capacidad de:
 \item	Realice las mediciones solicitadas y anote los valores en la Tabla \ref{tab:L3T2}.
 \item	Calcule los valores teóricos de los voltajes y corrientes solicitados; compruebe con ellos la validez de la ley de corrientes de Kirchhoff y la regla del divisor de corriente.
 \end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{tinkercad paralelo2.JPG}
+\caption{Circuito paralelo con amperímetro en Tinkercad}
+\end{figure}
 
 \begin{table}[H]
 	\caption{Mediciones realizadas en el circuito paralelo}
@@ -600,6 +628,13 @@ Al finalizar la práctica de laboratorio el estudiante estará en capacidad de:
 \item	Realice las mediciones solicitadas y anote los valores en la Tabla \ref{tab:L3T3}.
 \item	Calcule los valores teóricos de los voltajes y corrientes solicitados; compruebe con ellos la validez de la leyes de Kirchhoff.
 \end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{Circuito mixto tinkercad2.JPG}
+\caption{Circuito mixto en Tinkercad}
+\end{figure}
+
 
 \begin{table}[H]
 	\caption{Mediciones realizadas en el circuito mixto}
@@ -811,7 +846,7 @@ Directivas Spice a utilizar: \verb!.tran!; \verb!.step! y \verb!.meas!.
 
 \end{enumerate}
 
-\chapter{Análisis de Mallas y Teorema de Superposición}
+\chapter{Teorema de Superposición}
 
 \section{\obj}
 \capacidad
@@ -830,15 +865,15 @@ de circuitos y comparar los resultados con el método de análisis de mallas.
 \section{\mat}
 \textbf{A suministrar por la Escuela:}
 \begin{itemize}
-\item 1 fuente variable de voltaje DC.
+\item 1 fuente variable de voltaje DC con dos salidas.
 \item 10 cables conectores medianos.
 \end{itemize}
 \textbf{A suministrar por el estudiante:}
 \begin{itemize} 
-\item 1 multímetro digital
-\item 1 protoboard
-\item 5 Resistencias de $\frac{1}{2}$ \si{\watt}, con valores de 1 \si{\kilo\ohm}; 2,2 \si{\kilo\ohm}; 3,3 \si{\kilo\ohm}; 5,6 \si{\kilo\ohm}; y 10 \si{\kilo\ohm} (una de cada una)
-\item Cable telefónico
+\item   1 protoboard
+\item   1 multímetro digital
+\item 5 Resistencias de \SI{0.25}{\watt}, con valores de \SI{1}{\kilo\ohm}; \SI{10}{\kilo\ohm}; \SI{4.7}{\kilo\ohm}; \SI{4.7}{\kilo\ohm}; y \SI{2.2}{\kilo\ohm} (una de cada una)
+\item   Cables de interconexión macho-macho
 \end{itemize}
 
 \section{\pro}
@@ -881,7 +916,7 @@ voltaje de la rama \emph{ab}, tal como se indica en el circuito y anótelos en l
 \item Cortocircuite la fuente de 20 \si{\volt}. Ajuste la fuente de tensión de 10 \si{\volt} y vuelva a tomar los datos en la rama \emph{ab}.
 
 \begin{table}[H]
-	\caption{Valores de $V_{ab}$ onbtenidos con una fuente a la vez}
+	\caption{Valores de $V_{ab}$ obtenidos con una fuente a la vez}
 	\label{tab:L6T1}
 	\centering
 	\vspace{0.5cm}
@@ -899,7 +934,7 @@ voltaje de la rama \emph{ab}, tal como se indica en el circuito y anótelos en l
 \end{table}
 
 \begin{table}[H]
-	\caption{Valores de $I_{ab}$ onbtenidos con una fuente a la vez}
+	\caption{Valores de $I_{ab}$ obtenidos con una fuente a la vez}
 	\label{tab:L6T2}
 	\centering
 	\vspace{0.5cm}
@@ -919,6 +954,88 @@ voltaje de la rama \emph{ab}, tal como se indica en el circuito y anótelos en l
 analícelos.
 \end{enumerate}
 
+\chapter{Teoremas de Thévenin, Norton y Máxima transferencia de potencia}
+
+\section{\obj}
+\capacidad
+\begin{itemize}
+\item Comprobar de manera experimental los teoremas de Thévenin, Norton y Máxima
+transferencia de potencia.
+\item Comparar dos formas de medición experimental de la resistencia de
+Thévenin.
+\end{itemize}
+
+\section{\inv}
+\antesde
+\begin{enumerate}
+\item Enuncie el Teorema de Thévenin, incluya un dibujo.
+\item Enuncie el Teorema de Norton, incluya un dibujo.
+\item Enuncie el Teorema de Máxima Transferencia de Potencia, incluya un dibujo.
+\item Obtenga el equivalente de Thévenin y Norton entre las terminales $a$ y $b$ del circuito del
+laboratorio.
+\item Investigue y explique cuáles formas existen para encontrar experimentalmente los equivalentes de Thévenin y Norton.
+\end{enumerate}
+
+\section{\mat}
+\textbf{A suministrar por la Escuela:}
+\begin{itemize}
+\item 1 fuente variable de voltaje DC con dos salidas.
+\item 10 cables conectores medianos.
+\end{itemize}
+\textbf{A suministrar por el estudiante:}
+\begin{itemize} 
+\item   1 protoboard
+\item   1 multímetro digital
+\item 7 Resistencias de \SI{0.25}{\watt}, con valores de \SI{1}{\kilo\ohm}; \SI{1}{\kilo\ohm}; \SI{4.7}{\kilo\ohm}; \SI{4.7}{\kilo\ohm}; \SI{2.2}{\kilo\ohm};
+\SI{2.2}{\kilo\ohm};
+\SI{10}{\kilo\ohm};
+\item 2 potenciómetros de 10 \si{\kilo\ohm}
+\item   Cables de interconexión macho-macho
+\end{itemize}
+
+\section{\pro}
+Previamente al inicio del laboratorio prepare las tablas adecuadas para anotar los
+datos obtenidos.
+\begin{enumerate}
+\item Mida el valor real de cada una de las resistencias que se van a utilizar en el
+laboratorio, tabule estos valores adecuadamente. Cuando realice los cálculos
+teóricos utilice estos valores en lugar de los nominales.
+\item Realice en una protoboard las conexiones del circuito tal y como se indica en
+la Figura \ref{fig:L8F1}. Más adelante entre los puntos \emph{a} y \emph{b} se colocará la carga, que será un potenciómetro de 10 \si{\kilo\ohm}.
+
+\begin{figure}[H]
+\centering
+\begin{circuitikz} [scale=1]\draw
+(0,0)	to[resistor, l_={2,2}\si{\kilo\ohm}, -*] (0,3) 
+		to[short, -o] (0.5,3) node[right]{$a$} 
+(0,3)	to[resistor, l_={1}\si{\kilo\ohm}, -*] (0,6)
+		to[resistor, l={4,7}\si{\kilo\ohm}, -*] (3,6) -- (9,6)
+		to[resistor, l_={10}\si{\kilo\ohm}] (9,0) -- (0,0)
+(6,3)   node[right]{+15V}	
+		to[resistor, l_={1}\si{\kilo\ohm}, o-*] (3,3)
+		to[short, -o] (2.5,3) node[left]{$b$}
+(3,0)	node[ground]{} 
+		to[resistor, l_={4,7}\si{\kilo\ohm}] (3,3)
+		to[resistor, l_={2,2}\si{\kilo\ohm}] (3,6)
+(0,6)	to[short, -o] (-1,6) node[left]{+20V}
+;
+\end{circuitikz}
+\caption{Circuito para teoremas de Thevenin y máxima transferencia de potencia.}
+\label{fig:L8F1}
+\end{figure}
+
+\item Dejando un abierto en la carga, mida el voltaje que habría entre \emph{a} y \emph{b}; ese es el voltaje a circuito abierto $V_{OC}$; anótelo en la tabla correspondiente.
+\item Colocando un amperímetro entre los puntos \emph{a} y \emph{b} (de tal forma que se forme un corto circuito). Tabule adecuadamente este valor como la corriente de
+corto circuito $I_{SC}$.
+\item Coloque el potenciómetro de carga entre los puntos \emph{a} y \emph{b}. Varíe el valor del
+potenciómetro hasta que el voltaje en este sea la mitad del valor $V_{OC}$. 
+\item Mida el valor de la resistencia en el potenciómetro.
+\item Coloque en corto ambas fuentes y mida directamente la resistencia $R_{TH}$ entre
+los puntos \emph{a} y \emph{b}.
+\item Construya los equivalentes de Thevenin y Norton utilizando los resultados obtenidos, inclúyalos en el informe de este laboratorio.  
+\item Calcule el valor de la máxima potencia utilizando los resultados obtenidos.
+\end{enumerate}
+
 \chapter{Taller sobre el osciloscopio y el generador de señales}
 
 \section{\obj}
@@ -930,24 +1047,21 @@ analícelos.
 \section{\inv}
 Lea el Apéndice \ref{ap:osc} y responda las siguientes preguntas:
 \begin{enumerate}
-\item ¿Qué es un osciloscopio de almacenamiento digital?
-\item ¿Cómo se hace para representar una corriente utilizando un osciloscopio?
-\item ¿Qué es el disparo (trigger) en un osciloscopio? ¿Cómo afecta la
-representación de la señal en la pantalla?
-\item Generalmente los osciloscopios pueden graficar dos señales a la vez, ¿qué
-métodos de representación tienen estas dos? ¿Qué hacen las opciones de
-ADD y CHOP?
-\item ¿Por qué se puede invertir el canal 2 de un osciloscopio? ¿Qué aplicaciones
-prácticas tiene esto? ¿Por qué no se invierte el canal 1?
-\item ¿Cómo se establece el nivel de referencia a cero voltios en la pantalla del
-ORC?
-\item ¿Qué es un generador de señales?
-\item ¿Qué son señales alternas (CA o AC) y señales directas (CD o DC o CC)?
-\item Explique el concepto de amplitud, valor pico, periodo y frecuencia de una
-señal alterna.
-\item Investigue y explique qué son señales alternas sinusoidales, triangulares,
-diente de sierra, cuadrada, tren de pulsos (positivos y negativos)
-\item ¿Qué significa colocar un ‘offset’ a una señal de salida de un generador?
+\item ¿Qué estímulos físicos pueden estudiarse en un osciloscopio?
+\item ¿Qué es un osciloscopio?¿Qué variables representan los ejes X, Y y Z?
+\item ¿Qué tipo de información puede proporcionar un osciloscopio? Mencione ejemplos.
+\item ¿Cuál es la clasificación típica de los osciloscopios?
+\item ¿Cuál es la diferencia entre un osciloscopio analógico y uno digital? Mencione una virtud de los osciloscopios digitales.
+\item Investigue y explique con sus propias palabras sobre: Amplitud, desfase, frecuencia, periodo, tipos de onda, señales analógicas y señales digitales.
+\item ¿Qué es la integridad de la señal?¿Cómo se puede definir o evaluar? y ¿Cuál es su importancia?
+\item ¿Cuáles son los sistemas básicos que componen los osciloscopios? ¿Cómo se relacionan con la integridad de la señal?
+\item Mencione buenas prácticas al iniciar una medición con un osciloscopio.
+\item En el sistema vertical ¿Cuales son las funciones de los controles de posición, volts/div y límite de ancho de banda?
+\item ¿Cuál es la función de los modos de adquisición y cuáles son los tipos? Explique cada uno.
+\item ¿Cuál es la diferencia entre el muestreo de tiempo real y el muestreo de tiempo equivalente?
+\item En el sistema horizontal ¿Cuáles son las funciones de los controles de posición, secs/div y modos XY?
+\item ¿Cuáles son las funciones del sistema de disparo (Trigger)? Explique los diferentes tipos.
+\item Mencione y explique las funciones matemáticas que poseen la mayoría de osciloscopios digitales.
 \end{enumerate}
 
 \section{\mat}
@@ -970,96 +1084,9 @@ intensidad, pendiente de la gráfica, ajuste de cero y calibración.
 \item Obtenga del generador una señal de 1 kHz, 5 V de amplitud y sin offset, si
 tiene problemas viendo la señal en la pantalla utilice el control del ‘trigger’.
 \item Cambie el ‘trigger’ y observe cómo afecta este a la señal mostrada.
-\item A continuación el profesor le solicitará que haga varias pruebas con el ORC
-y el generador de señales, sigas las instrucciones y reporte en la bitácora.
+\item A continuación el profesor le solicitará que haga varias pruebas con el oscilloscopio
+y el generador de señales, sigas las instrucciones e incluya detalles en el reporte.
 \end{enumerate}
-
-\chapter{Teoremas de Thévenin y máxima transferencia de potencia}
-
-\section{\obj}
-\capacidad
-\begin{itemize}
-\item Comprobar de manera experimental los teoremas de Thévenin y máxima
-transferencia de potencia.
-\item Comparar dos formas de medición experimental de la resistencia de
-Thévenin.
-\end{itemize}
-
-\section{\inv}
-\antesde
-\begin{enumerate}
-\item Investigue el teorema de Thévenin y explique la relación de los circuitos
-equivalentes de Norton y Thévenin. ¿Cómo se transforma del uno al otro?
-\item Suponga un circuito serie que conste de una fuente CD de 25 V, una
-resistencia de 40 \si{\ohm} y una resistencia variable $R$. Cree una tabla donde se
-muestre el valor de la potencia en la resistencia $R$ con respecto a su valor,
-cree la tabla variando $R$ en pasos de 5 \si{\ohm} entre cero y 100 \si{\ohm} ¿Qué valor de $R$ define un máximo de potencia entregada por la fuente? Grafique la tabla
-anterior y muestre lo encontrado.
-\item Obtenga el equivalente de Thévenin visto por la carga $R_L$ del circuito del
-laboratorio.
-\item Investigue y explique cuáles formas existen para encontrar experimentalmente el circuito equivalente de Thévenin.
-\item Una vez realizado lo anterior, obtenga el circuito equivalente de Norton.
-\end{enumerate}
-
-\section{\mat}
-\begin{itemize}
-\item 1 fuente DC con dos salidas de voltaje (a proveer por la Escuela)
-\item Cables conectores (a proveer por la Escuela)
-\item Resistencias de $\frac{1}{2}$ \si{\watt}, con valores de 1 \si{\kilo\ohm}; 2,2 \si{\kilo\ohm}; 3,3 \si{\kilo\ohm}; 4,7 \si{\kilo\ohm}; 6,8 \si{\kilo\ohm} y
-7,5 \si{\kilo\ohm} (una de cada una)
-\item 1 multímetro digital
-\item 1 protoboard
-\item 2 potenciómetros de 10 \si{\kilo\ohm}
-\item Cables telefónicos
-\end{itemize}
-
-\section{\pro}
-Previamente al inicio del laboratorio prepare las tablas adecuadas para anotar los
-datos obtenidos.
-\begin{enumerate}
-\item Mida el valor real de cada una de las resistencias que se van a utilizar en el
-laboratorio, tabule estos valores adecuadamente. Cuando realice los cálculos
-teóricos utilice estos valores en lugar de los nominales.
-\item Realice en una protoboard las conexiones del circuito tal y como se indica en
-la Figura \ref{fig:L8F1}. Más adelante entre los puntos \emph{a} y \emph{b} se colocará la carga, que será un potenciómetro de 10 \si{\kilo\ohm}.
-
-\begin{figure}[H]
-\centering
-\begin{circuitikz} [scale=1]\draw
-(0,0)	to[resistor, l_={2,2}\si{\kilo\ohm}, -*] (0,3) 
-		to[short, -o] (1,3) node[right]{a} 
-(0,3)	to[resistor, l_={1}\si{\kilo\ohm}, -*] (0,6)
-		to[resistor, l={7,5}\si{\kilo\ohm}, -*] (3,6) -- (9,6)
-		to[resistor, l_={6,8}\si{\kilo\ohm}] (9,0) -- (0,0)
-(6,3)   node[right]{+15V}	
-		to[resistor, l_={1}\si{\kilo\ohm}, o-*] (3,3)
-		to[short, -o] (2,3) node[left]{b}
-(3,0)	node[ground]{} 
-		to[resistor, l_={4,7}\si{\kilo\ohm}] (3,3)
-		to[resistor, l_={3,3}\si{\kilo\ohm}] (3,6)
-(0,6)	to[short, -o] (-1,6) node[left]{+20V}
-;
-\end{circuitikz}
-\caption{Circuito para teoremas de Thevenin y máxima transferencia de potencia.}
-\label{fig:L8F1}
-\end{figure}
-
-\item Dejando un abierto en la carga, mida el voltaje que habría entre \emph{a} y \emph{b}; ese es el voltaje a circuito abierto $V_{OC}$; anótelo en la tabla correspondiente.
-\item Colocando un amperímetro entre los puntos \emph{a} y \emph{b} (de tal forma que se forme un corto circuito). Tabule adecuadamente este valor como la corriente de
-corto circuito $I_{SC}$.
-\item Coloque el potenciómetro de carga entre los puntos \emph{a} y \emph{b}. Varíe el valor del
-potenciómetro hasta que el voltaje en este sea la mitad del valor $V_{OC}$. Tabule
-adecuadamente el valor de resistencia en el potenciómetro.
-\item Relacione los datos obtenidos con $V_{TH}$ y $R_{TH}$.
-\item Coloque en corto ambas fuentes y mida directamente la resistencia $R_{TH}$ entre
-los puntos \emph{a} y \emph{b}.
-\item Arme un circuito que conste de una fuente de voltaje con valor $V_{TH}$ en serie
-con una resistencia con el valor de $R_{TH}$ (para esto utilice el otro potenciómetro
-de 10 \si{\kilo\ohm} y la resistencia de carga utilizada.
-\item Varíe la resistencia de carga hasta que en esta halla un voltaje igual a la
-mitad del valor $V_{OC}$; mida la resistencia de carga.
-\end{enumerate}
-
 
 
 \chapter{Circuitos RL y RC}
@@ -1099,9 +1126,7 @@ de igual frecuencia?
 \section{\pro}
 \subsection{Circuito transitorio RC}
 \begin{enumerate}
-\item Arme el circuito de la Figura \ref{fig:L9F1} y conecte el osciloscopio de rayos
-catódicos tal y como se indica. Haga que el voltaje de salida del
-generador sea 5 $\mathrm{V_P}$.
+\item Arme el circuito de la Figura \ref{fig:L9F1} y conecte el osciloscopio digital tal como se indica. El voltaje del generador debe ser mayor a \SI{5}{\volt}.
 
 \begin{figure}[H]
 \centering
@@ -1124,25 +1149,23 @@ generador sea 5 $\mathrm{V_P}$.
 \label{fig:L9F1}
 \end{figure}
 
-\item Observe y dibuje los gráficos $\mathrm{V_C}$ e $\mathrm{I_C}$ contra la variable temporal.
-\item Varíe la escala temporal de tal forma que pueda medir tau ($\tau$) en el
-osciloscopio.
-\item Varíe el generador de señales a una onda senoidal de 5V pico.
-\item Calcule el ángulo de fase mediante las figuras de Lissajous.
+\item Observe los gráficos de $\mathrm{V_C}$ e $\mathrm{I_C}$ contra la variable temporal.
+\item Mida la constante de tiempo ($\tau$) usando la función de cursores.
+\item Varíe el generador de señales a una onda senoidal.
+\item Calcule el ángulo de fase usando la función de cursores. 
+\item Compruebe el ángulo de fase mediante las figuras de Lissajous.
 \end{enumerate}
 
 \subsection{Circuito transitorio RL}
 
 \begin{enumerate}
-\item Arme el circuito de la Figura \ref{fig:L9F1} y conecte el osciloscopio de rayos
-catódicos tal y como se indica. Haga que el voltaje de salida del
-generador sea 5 $\mathrm{V_P}$.
+\item Arme el circuito de la Figura \ref{fig:L9F2} y conecte el osciloscopio digital tal como se indica. El voltaje del generador debe ser mayor a \SI{5}{\volt}.
 
 \begin{figure}[H]
 \centering
 \begin{circuitikz} [scale=1]\draw
-(0,0)	to[resistor, l={330}\si{\ohm}] (3,0)
-		to[inductor, l={20}\si{\milli\henry}] (3,-3) -- (0,-3)
+(0,0)	to[resistor, l={470}\si{\ohm}] (3,0)
+		to[inductor, l={2.35}\si{\milli\henry}] (3,-3) -- (0,-3)
 		to[square voltage source, l=$V_F$] (0,0)
 ;
 		\draw 
@@ -1159,9 +1182,11 @@ generador sea 5 $\mathrm{V_P}$.
 \label{fig:L9F2}
 \end{figure}
 
-\item Observe y dibuje los gráficos $\mathrm{V_L}$ e $\mathrm{I_L}$ contra la variable temporal.
-\item Varíe la escala temporal de tal forma que pueda medir tau ($\tau$) en el
-osciloscopio.
+\item Observe los gráficos de $\mathrm{V_L}$ e $\mathrm{I_L}$ contra la variable temporal.
+\item Mida la constante de tiempo ($\tau$) usando la función de cursores.
+\item Varíe el generador de señales a una onda senoidal.
+\item Calcule el ángulo de fase usando la función de cursores. 
+\item Compruebe el ángulo de fase mediante las figuras de Lissajous.
 \end{enumerate}
 
 \chapter{Valores eficaces}
@@ -1209,36 +1234,34 @@ señales alternas sin offset (a menos que se indique lo contrario)
 \section{\pro}
 \begin{enumerate}
 \item Conecte la salida del generador de señales directamente al osciloscopio. Con
-ayuda de este haga que la señal de salida sea una onda sinusoidal de 1 kHz
-de frecuencia, 5 $\mathrm{V_P}$ y cero voltios de offset. \emph{Nota: Asegúrese de que el osciloscopio esté debidamente calibrado.}
-\item Con ayuda de un multímetro ‘True RMS’ mida el valor RMS de la señal de
-salida del generador, varíe la frecuencia de salida tanto para valores mayores y menores ¿nota algún cambio en el voltaje de salida? Informe
-adecuadamente sus observaciones.
+ayuda de este haga que la señal de salida sea una onda sinusoidal de una frecuencia cercana a los \SI{200}{\hertz}, y una amplitud de \SI{4}{\volt} con cero voltios de offset. 
+\item Usando un multímetro ``True RMS'' mida la componente en DC y AC del voltaje a la salida del generador.
 \item Complete la Tabla \ref{tab:L10T1} para diferentes valores de ondas y compare con
-los valores esperados. Para todos los casos la señal de salida será de 1 kHz
-y 5 $\mathrm{V_P}$.
+los valores esperados. Para todos los casos la señal de salida será de una  frecuencia cercana a los \SI{200}{\hertz} y una amplitud de \SI{4}{\volt}.
 \begin{table}[H]
-	\caption{Corrientes del circuito mixto}
+	\caption{Valores eficaces de diferentes ondas}
 	\label{tab:L10T1}
+	\vspace{0.5cm}
 	\centering
-	\begin{tabularx}{12cm}{CCCCC}
+		\begin{tabularx}{15cm}{lXXXX}
 	    \toprule
-		Tipo de onda & Offset (V) & $\mathrm{V_{RMS}}$ teórico(V) &$\mathrm{V_{RMS}}$ experimental(V) &\% de error\\
+		& DC & $\mathrm{V_{RMS}}$ &$\mathrm{V_{RMS}}$ & Error\\
+		Tipo de onda & offset (V) & teor. (V) & exp.(V) & (\%)\\
 		\midrule
 		Sinusoidal & 0 & & & \\
-		Sinusoidal & 2 & & & \\
+		Sinusoidal (off=2V) & 2 & & & \\
 		Triangular & 0 & & & \\
 		Diente de sierra & 0 & & & \\
 		Cuadrada & 0 & & & \\
-		Tren de pulsos positivos & 0 & & & \\
-		Tren de pulsos negativos & 0 & & & \\
+		Tren de pulsos pos. & 0 & & & \\
+		Tren de pulsos neg. & 0 & & & \\
 		\bottomrule
 	\end{tabularx}
 \end{table}
 
 \end{enumerate}
 
-\chapter{Circuitos mixto RLC en corriente alterna}
+\chapter{Circuito mixto RLC en corriente alterna}
 
 \section{\obj}
 \capacidad
@@ -1266,97 +1289,77 @@ suceptancia?
 
 \begin{itemize}
 \item 1 multímetro digital (a proveer por el grupo)
-\item 1 generador de señales BK
-\item 1 inductor de 20 \si{\milli\henry}
-\item 1 capacitor de 47 \si{\nano\farad}
-\item 1 resistencia de 1000 \si{\ohm}
+\item 1 generador de señales
+\item 1 inductor radial de \SI{100}{\micro\henry}
+\item 1 capacitor de \SI{10}{\micro\farad}
+\item 1 resistencia de \SI{470}{\ohm}
 \item Cables de conexión
 \end{itemize}
 
 \section{\pro}
 
 \begin{enumerate}
-\item Para el siguiente circuito mixto RLC, realice los cálculos teóricos
-correspondientes, con el propósito de seleccionar adecuadamente la
-amplitud de las escalas del equipo que se va a utilizar.
+\item Arme el siguiente circuito mixto RLC en una protoboard, realice las mediciones de los elementos para realizar sus cálculos teóricos del informe. Recuerde medir la resistencia interna del inductor ($R_L$) e incluirla en sus cálculos.
 
 \begin{figure}[H]
 \centering
 \begin{circuitikz} [scale=1]\draw
-(0,0)	to[sV, l=5 V] (0,3)
-		to[resistor, l=R] (3,3) -- (6,3)
-		to[capacitor, l=C] (6,0) -- (0,0)
-(3,3)  	to[L, l={\parbox{1cm}{\centering L\\R$_L$}}] (3,0)
+(0,0)	to[sV, l=$\SI{4}{\volt} @ \SI{100}{\hertz}$] (0,4)
+		to[resistor, l=$R$, v=$V_R$, i>^=$i_t$] (3,4) -- (6,4)
+		to[capacitor, l=$C$, i>^=$i_C$] (6,0) -- (0,0)
+(3,4)  	to[L, l=$L$, v=$V_{LC}$, i>^=$i_L$] (3,0)
 ;
 \end{circuitikz}
 \caption{Circuito RLC en corriente alterna}
-
-\begin{flushleft}
-\emph{Nota:} Para los cálculos teóricos se deben considerar los siguientes valores
-\end{flushleft}
-\begin{align*}
-V&= \SI{5}{\volt} & F&=\SI{4}{\kilo\hertz} & R&= \SI{1000}{\ohm}\\
-C&=\SI{47}{\nano\farad} & L&=\SI{20}{\milli\henry} & R_L&= \SI{60}{\ohm}
-\end{align*}
 \end{figure}
 
-\item Mida y anote los valores reales de la resistencia R del circuito y de la
-resistencia interna del inductor, a efecto de comparar su concordancia. Anote
+\emph{Nota:} Para los cálculos teóricos de la investigación previa se deben considerar los valores teóricos incluidos en la Tabla \ref{tab:L11T1}.
+
+\item Mida y anote los valores reales de los elementos y parametros del circuito incluyendo la
+resistencia interna del inductor y exluyendo el la inductancia del inductor. Anote
 los valores en la Tabla \ref{tab:L11T1}.
 
 \begin{table}[H]
-	\caption{Valores Teóricos y experimentales de las resistencias.}
+	\caption{Valores teóricos y experimentales.}
 	\label{tab:L11T1}
+	\vspace{0.5cm}
 	\centering
-	\begin{tabular}[h]{|c|c|c|}
-		\cline{2-3}
-		\multicolumn{1}{c|}{} &
-		\multicolumn{1}{c|}{Valor teórico} &
-		\multicolumn{1}{c|}{Valor experimental} \\
-		
-		$R$ & \SI{1000}{\ohm} & {} \\
-		
-		$R_L$ & \SI{60}{\ohm} & {} \\
-		
-	\end{tabular}
+	\begin{tabularx}{10cm}{lXX}
+		\toprule
+		 & Valor teórico & Valor experimental \\
+		 \midrule
+		$V$ & \SI{4}{\volt} & \\
+		$f$ & \SI{100}{\hertz} & \\
+		$R$ & \SI{470}{\ohm} & \\
+		$C$ & \SI{10}{\micro\farad} & \\
+		$L$ & \SI{100}{\micro\henry} & \\
+		$R_L$ & \SI{330}{\ohm} & \\
+		\bottomrule
+	\end{tabularx}
 \end{table}
-\item Arme el circuito, con los valores de resistencia e inductancia que se indican.
-\item Escoja la amplitud apropiada de escala en el generador de audio y gradúe la
-frecuencia a \SI{4}{\kilo\hertz}.
-\item Encienda la fuente y lleve lentamente el generador de audio a un voltaje de \SI{5}{V}.
+\item Encienda la fuente y lleve lentamente el generador de audio a un voltaje de \SI{4}{V} a \SI{100}{\hertz}.
 \item Ubicando apropiadamente el multímetro digital según sea el caso, proceda a medir la corriente que pasa por la resistencia, el inductor y el capacitor.\par
 
-\emph{Nota:} Asegúrese de apagar el generador de audio cada vez que cambie la ubicación del multímetro digital, para ponerlo en serie con el elemento siguiente.
-\item Proceda a medir el voltaje a través de la resistencia, del inductor y del capacitor y anótelos también en la Tabla referREFE.
+\emph{Nota:} Asegúrese de apagar el generador de audio cada vez que cambie la ubicación del multímetro digital.
+\item Proceda a medir el voltaje a través de la resistencia, del inductor y del capacitor y anótelos también en la Tabla \ref{tab:L11T2}.
 \item Compare los valores experimentales con aquellos calculados teóricamente, y obtenga las conclusiones correspondientes.
 
 \begin{table}[H]
 	\caption{Valores teóricos y experimentales para el circuito RLC.}
 	\label{tab:L11T2}
 	\centering
-	\begin{tabular}[h]{|c|c|c|c|}
-		\cline{2-4}
-		\multicolumn{1}{c|}{} &
-		\multicolumn{1}{c|}{Valor teórico} &
-		\multicolumn{1}{c|}{Valor experimental} &
-		\multicolumn{1}{c|}{\% de error}\\
-		
-		$I_{total}$(mA) & {} & {} & {} \\
-		
-		$I_{inductor}$(mA) & {} & {} & {} \\
-		
-		$I_{capacitor}$(mA) & {} & {} & {} \\
-		
-		$V_{resistencia}$(V) & {} & {} & {} \\
-		
-		$V_{inductor}$(V) & {} & {} & {} \\
-		
-		$V_{capacitor}$(V) & {} & {} & {} \\
-		
-	\end{tabular}
-\begin{flushleft}
-\emph{Nota:} Debe anotarse el ángulo en los valores teóricos de la tabla.
-\end{flushleft}
+	\begin{tabularx}{14cm}{lXXX}
+		\toprule
+		& Valor teórico & Valor experimental & \% de error \\
+		\midrule
+		$I_{t}$(mA) & & & \\
+		$I_{L}$(mA) & & & \\
+		$I_{C}$(mA) & & & \\
+		$V_{R}$(V) & & & \\
+		$V_{LC}$(V) & & & \\
+		\bottomrule
+	\end{tabularx}
+    
 \end{table}
 \end{enumerate}
 

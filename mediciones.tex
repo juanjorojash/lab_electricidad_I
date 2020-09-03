@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage[spanish,activeacute]{babel}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage{siunitx}
+\usepackage[american,RPvoltages]{circuitikz} %Este se usa para hacer circuitos
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+
+% *** GRAPHICS RELATED PACKAGES ***
+%
+\usepackage{graphicx}
+\graphicspath{{../pdf/}{../png/}}
+\DeclareGraphicsExtensions{.pdf,.jpg,.png}
+\usepackage{subfigure}
+
+
+\begin{document}
+\renewcommand{\tablename}{Tabla}
+\renewcommand{\listtablename}{Índice de tablas}
+\noindent
+\begin{tabularx}{\linewidth}{Xr}
+\textbf{Lab. de Electricidad I}& \textbf{Mediciones del Laboratorio virtual} 
+\end{tabularx}\\
+
+\noindent\rule[2ex]{\textwidth}{2pt}
+\centering
+\textbf{Lab \# 5: Teorema de Superposición}\\[12pt]
+\noindent\rule[2ex]{\textwidth}{2pt}
+
+\begin{table}[H]
+	\caption{Valores medidos de las resistencias utilizadas}
+	\centering
+	\vspace{0.5cm}
+	\begin{tabularx}{10cm}{lCC}
+	    \toprule
+		Teórico (\si{\kilo\ohm}) & Real (\si{\kilo\ohm}) & Comentarios\\
+		\midrule
+		1 & 1 &\\
+		10 & 10,11 &\\
+		4,7 & 4,68 & horizontal (a-b)\\
+		4,7 & 4,67 & vertical\\
+		2,2 & 2,18 &\\
+		\bottomrule
+	\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+	\caption{Valores de $V_{ab}$ medidos con una fuente a la vez}
+	\centering
+	\vspace{0.5cm}
+	\begin{tabularx}{6cm}{lC}
+	    \toprule
+		Solo la de \SI{10}{\volt} & \SI{6.03}{\volt}\\
+		Solo la de \SI{20}{\volt} & \SI{-9.08}{\volt}\\
+		$\sum$ de fuentes & \SI{-3.05}{\volt}\\
+		\midrule
+		Ambas fuentes & \SI{-2.99}{\volt}\\
+		\bottomrule
+	\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+	\caption{Valores de $I_{ab}$ medidos con una fuente a la vez}
+	\centering
+	\vspace{0.5cm}
+	\begin{tabularx}{6cm}{lC}
+	    \toprule
+		Solo la de \SI{10}{\volt} & \SI{1.29}{\ampere}\\
+		Solo la de \SI{20}{\volt} & \SI{-1.93}{\ampere}\\
+		$\sum$ de fuentes & \SI{-0.64}{\volt}\\
+		\midrule
+		Ambas fuentes & \SI{-0.64}{\volt}\\
+		\bottomrule
+	\end{tabularx}
+\end{table}
+
+\end{document}
